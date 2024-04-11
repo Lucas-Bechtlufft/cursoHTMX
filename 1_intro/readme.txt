@@ -1,5 +1,5 @@
 /*
-Foi necessário fazer o seguinte passo para funcioar o http-server:
+Foi necessário fazer o seguinte passo para funcionar o http-server (no Powershell):
 
-Set-ExecutionPolicy Unrestricted -Scope Process no Powershell
+Set-ExecutionPolicy Unrestricted -Scope Process
 */
