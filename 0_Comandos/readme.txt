@@ -1,12 +1,19 @@
 /*
-HTMX - COMANDOS
-Foi necessário fazer o seguinte passo para funcionar o http-server (no Powershell):
+EXTENSÕES
+htmx-tags
 
-Set-ExecutionPolicy Unrestricted -Scope Process
+PREPARANDO AMBIENTE
+npm i -g http-server
+
+HTMX - COMANDOS
 
 Rodar o back-end ->
 Abrir um terminal na pasta API
 node --watch .\index.js
+
+Foi necessário fazer o seguinte passo para funcionar o http-server (no Powershell):
+abrir um terminal na pasta 2_conceitos
+Set-ExecutionPolicy Unrestricted -Scope Process
 */
 
 /*
