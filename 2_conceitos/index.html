@@ -10,6 +10,7 @@
     integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0"
     crossorigin="anonymous"
   ></script>
+  <script src="scripts.js" defer></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -81,6 +82,26 @@
   <div id="result-external"></div>
 
   
+  <h2>Aula 5</h2>
+  <button 
+    hx-get="http://localhost:3000/control-click"
+    hx-target="#result-control-click" 
+    hx-trigger="click[ctrlKey]"
+  >
+    Control Click
+  </button>
+  <div id="result-control-click"></div>
+
+  <button 
+    hx-get="http://localhost:3000/global-condition"
+    hx-target="#result-global-condition" 
+    hx-trigger="click[checkCondition()] once"
+  >
+    Trigger com função em JS
+  </button>
+  <div id="result-global-condition"></div>
+
+
 </body>
 
 
