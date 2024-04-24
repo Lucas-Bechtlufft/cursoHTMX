@@ -5,27 +5,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conceitos Fundametais</title>
-  <script src="https://unpkg.com/htmx.org@1.9.11"
+  <script 
+    src="https://unpkg.com/htmx.org@1.9.11"
     integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <h2>Aula 1</h2>
-  <button hx-post="http://localhost:3000/'post'" hx-target="#result-post">Enviar POST</button>
+  <button 
+    hx-post="http://localhost:3000/post" 
+    hx-target="#result-post"
+  >
+    Enviar POST
+  </button>
   <div id="result-post"></div>
 
   <h2>Aula 2</h2>
 
-  <button hx-put="http://localhost:3000/put" hx-target="#result-put">Enviar PUT</button>
+  <button 
+    hx-put="http://localhost:3000/put" 
+    hx-target="#result-put"
+  >
+    Enviar PUT
+  </button>
   <div id="result-put"></div>
 
-  <button hx-delete="http://localhost:3000/delete" hx-target="#result-delete">Enviar DELETE</button>
+  <button 
+    hx-delete="http://localhost:3000/delete" 
+    hx-target="#result-delete"
+  > 
+    Enviar DELETE
+  </button>
   <div id="result-delete"></div>
 
   <h2>Aula 3</h2>
-  <input type="text" hx-get="http://localhost:3000/trigger" hx-target="#result-trigger" hx-trigger="keyup">
+  <input 
+    type="text" 
+    hx-get="http://localhost:3000/trigger" 
+    hx-target="#result-trigger" 
+    hx-trigger="keyup"
+  >
   <div id="result-trigger"></div>
+
+  <h2>Aula 4</h2>
+  <button 
+    hx-get="http://localhost:3000/once"
+    hx-target="#result-once" 
+    hx-trigger="click once"
+  >
+    Clique uma vez
+  </button>
+  <div id="result-once"></div>
+
+  <button 
+    hx-get="http://localhost:3000/delay" 
+    hx-target="#result-once" 
+    hx-trigger="click delay:2000ms"
+  >
+    Delay de 2 segundos
+  </button>
+  <div id="result-delay"></div>
+
+  <button id="external-trigger">Clique para acionar</button>
+  <button 
+    id="trigger-button"
+    hx-get="http://localhost:3000/external" 
+    hx-target="#result-external" 
+    hx-trigger="click from:#external-trigger"
+  >
+    Botão Oculto
+  </button>
+  <div id="result-external"></div>
+
+  
 </body>
+
 
 </html>
